@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'add-associado',
     loadChildren: () => import('./paginas/associado/add-associado/add-associado.module').then( m => m.AddAssociadoPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./paginas/home/home.module').then( m => m.HomePageModule)
   }
 ];
 
