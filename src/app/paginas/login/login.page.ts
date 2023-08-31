@@ -9,23 +9,23 @@ import { MenuController, NavController } from '@ionic/angular';
 export class LoginPage implements OnInit {
 
   constructor(public nav : NavController,
-    public menu : MenuController) {
+    public menu : MenuController) { 
    }
 
    ionViewWillEnter(){
-    this.menu.enable(false);
+    this.menu.enable(false); /* DEIXA O MENU LATERL DESATIVADO COMO PADRAO */
    }
 
    ionViewDidLeave(){
-    this.menu.enable(true);
+    this.menu.enable(true); /* AO SAIR DA TELA PADRAO, ATIVA O MENU LATERAL */
    }
 
   logar() {
-    this.nav.navigateForward('home');
+    this.nav.navigateForward('home'); /* NAVEGA AO HOME DEPOIS DE LOGAR */
   }
 
   registrar() {
-    this.nav.navigateForward('add-associado');
+    this.nav.navigateForward('add-associado'); /* LEVA NA PAGINA DE REGISTRAR */
   }
 
   ngOnInit() {
