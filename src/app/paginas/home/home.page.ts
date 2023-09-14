@@ -1,3 +1,4 @@
+import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(public nav : NavController) {
+   }
+   equipamentos()
+   {
+      this.nav.navigateForward('sel-equipamento');
+   }
 
   ngOnInit() {
   }
